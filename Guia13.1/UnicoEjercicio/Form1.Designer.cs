@@ -72,6 +72,7 @@
             this.btnImportarVehiculos.TabIndex = 2;
             this.btnImportarVehiculos.Text = "Importar Vehículos";
             this.btnImportarVehiculos.UseVisualStyleBackColor = true;
+            this.btnImportarVehiculos.Click += new System.EventHandler(this.btnImportarVehiculos_Click);
             // 
             // btnTicket
             // 
@@ -195,6 +196,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.gbxDatos.ResumeLayout(false);
             this.gbxDatos.PerformLayout();
             this.ResumeLayout(false);

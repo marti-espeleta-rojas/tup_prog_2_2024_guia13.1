@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UnicoEjercicio.Models
+namespace Parcial_2_Solución.Models
 {
     [Serializable]
     public class DNINoValidoException : ApplicationException
     {
-        public DNINoValidoException() : base("El DNI es inválido. Intente nuevamente ingresando un DNI válido") { }
+        public DNINoValidoException():base("El DNI no es válido") { }
         public DNINoValidoException(string msg) : base(msg) { }
-        public DNINoValidoException(string msg, Exception inner) : base(msg, inner) { }
+        public DNINoValidoException(string msg, Exception ez) : base(msg, ez) { }
     }
 }

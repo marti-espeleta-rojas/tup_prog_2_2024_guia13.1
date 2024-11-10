@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace UnicoEjercicio.Models
 {
+    [Serializable]
     public class Cliente : Ticket, IComparable<Cliente>
     {
         private long dni;

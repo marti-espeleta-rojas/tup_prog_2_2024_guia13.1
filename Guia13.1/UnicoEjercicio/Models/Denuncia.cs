@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace UnicoEjercicio.Models
 {
+    [Serializable]
     public class Denuncia : Ticket
     {
         private Vehiculo dominio;

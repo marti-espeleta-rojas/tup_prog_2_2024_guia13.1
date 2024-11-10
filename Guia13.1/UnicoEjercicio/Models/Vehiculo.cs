@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace UnicoEjercicio.Models
 {
+    [Serializable]
     public class Vehiculo : IComparable<Vehiculo>
     {
         private string nroPatente;
@@ -22,14 +23,18 @@ namespace UnicoEjercicio.Models
             return this.dueño;
         }
 
-        private string VerPatente()
+        public string VerPatente()
         {
             return nroPatente;
         }
 
         public int CompareTo(Vehiculo vehi)
         {
-            return this.nroPatente.CompareTo(vehi.VerPatente());
+            if (vehi != null)
+            {
+                return this.nroPatente.CompareTo(vehi.VerPatente());
+            }
+            return 1;
         }
 
         public override string ToString()

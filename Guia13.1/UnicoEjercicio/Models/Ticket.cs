@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace UnicoEjercicio.Models
 {
+    [Serializable]
     public abstract class Ticket
     {
         protected int nroOrden; //este número es asignado en el momento en que incremento el contador estático de clases derivadas para cada entidad
