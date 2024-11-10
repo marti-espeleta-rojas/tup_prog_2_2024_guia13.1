@@ -109,7 +109,10 @@ namespace Parcial_2_Solución
                 string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), fileName);
                 fs = new FileStream(filePath, FileMode.OpenOrCreate, FileAccess.Read);
                 bf = new BinaryFormatter();
-                comercio = bf.Deserialize(fs) as Comercio;
+                if (fs.Length > 0)
+                {
+                    comercio = bf.Deserialize(fs) as Comercio;
+                }
             }
             catch (SerializationException ex)
             {

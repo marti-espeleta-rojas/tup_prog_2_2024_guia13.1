@@ -15,7 +15,7 @@ namespace Parcial_2_Solución.Models
 
         public Cliente(int dni)
         {
-            if(dni > 3000000 && dni < 45000000)
+            if(dni > 3000000 && dni < 450000000)
             {
                 this.dni = dni;
                 nroInicio++;

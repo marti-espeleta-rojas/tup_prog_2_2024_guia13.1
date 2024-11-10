@@ -11,9 +11,13 @@ namespace Parcial_2_Solución.Models
     public class Comercio
     {
         List<Ticket> ListaAtendidos = new List<Ticket>();
-        List<CuentaCorriente> cuentas = new List<CuentaCorriente>();
+        List<CuentaCorriente> cuentas = new List<CuentaCorriente>() 
+        //Inicializo las cuentas del comercio
+        { new CuentaCorriente(1, new Cliente(47175513)), new CuentaCorriente(2, new Cliente(24264435)), new CuentaCorriente(4, new Cliente(34523667)), new CuentaCorriente(3, new Cliente(24665743))};
         Queue<Cliente> clientes = new Queue<Cliente>();
         Queue<Pago> pagos = new Queue<Pago>();
+
+        
 
         public CuentaCorriente this[int numero] //indexador por número de cuenta.
         {
